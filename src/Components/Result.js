@@ -13,7 +13,7 @@ const Result = ({info,state,setstate}) => {
               info.map((e,x)=>
                 e.map((result,y)=>
                     result.map((characters,i,j) =>        
-                                <div key={i} className="card offset-1 mt-5 " style={{ width : "350px",height:"100px"}} >
+                                <div key={i} className="result card offset-1 mt-5 " style={{ width : "350px",height:"100px"}} >
                                 <div className="border-success " style={{ width : "150px",height:"100px"}}>
                                 <h5 className="card-title mt-2">{characters.name}</h5>
                                <p 

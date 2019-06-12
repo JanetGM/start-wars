@@ -30,6 +30,11 @@ body{
   height: 40px;
  
 }
+
+.result{
+  background-color:rgb(108, 151, 231);
+}
+
 .text-box{
   color: #61dafb;
 }

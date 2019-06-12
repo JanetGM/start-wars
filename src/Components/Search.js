@@ -16,8 +16,9 @@ const Search = ({info,search,showDetails,setShowDetails}) => {
                         (
                             
                                 <div key={i} className="card offset-1 mt-5 animated bounce delay-5s" style={{ width : "150px",height:"100px"}} >
-                                <div className="border-success " style={{ width : "150px",height:"100px"}}>
                                 <h5 className="card-title">{characters.name}</h5>
+                                <p>Peso : {characters.mass}.Kg</p>
+                                <p>Año :{characters.birthay_year}</p>
                                 <div className="card-footer bg-transparent border-success" style={{ width : "150px",height:"20px"}}>
                                 <p onClick={()=>
                                 {
@@ -28,12 +29,7 @@ const Search = ({info,search,showDetails,setShowDetails}) => {
                                 } </p>
                                 </div>
                                 </div>
-                                </div>
-                          
-                            
-                        ):null
-                      
-                     
+                          ):null                    
                     )
                  
                   )
