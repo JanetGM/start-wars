@@ -2,11 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Character from './Character';
 
-const Navigation = ({info,state}) => {
+const Navigation = ({info,state,setstate}) => {
   return (
     <div>
-    
-      <NavLink to="/Home" >Home</NavLink>
+      <NavLink  onClick={()=>setstate({x:100,y:100,i:100})}>Home</NavLink>
       <Character info={info}  position={state}/>
     </div>
   );

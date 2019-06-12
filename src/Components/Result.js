@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Character from './Character';
 import {Link} from 'react-router-dom';
+import Navigation from './Navigation'
 
 
 
@@ -21,8 +22,10 @@ const Result = ({info,state,setstate}) => {
                                 onClick={(e)=>{
                                     e.preventDefault();
                                     setstate({x:x,y:y,i:i});  
+                                  
                                 }}
                                >Detalles</p>
+                               
                                 </div>
                                 </div>
                                 
@@ -34,6 +37,7 @@ const Result = ({info,state,setstate}) => {
          }
          
          {<Character info={info} position={state}/>}
+      
          </>     
     )
 }

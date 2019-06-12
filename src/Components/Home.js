@@ -2,6 +2,7 @@ import React from 'react';
 import Result from './Result';
 import Character from './Character';
 import Search from './Search';
+import Navigation from './Navigation';
 import axios from 'axios';
 import {useEffect,useState} from 'react';
 import '../App.css';
@@ -31,11 +32,7 @@ const Home = () => {
            
         (state.x !== 100 && state.y!==100 && state.i!==100)
         ?
-        (
-            <Link to="/Character">Character</Link>
-             
-        )
-
+       ''
         :( 
         <>
         <p className="title display-2 mt-5">STAR WARS</p>
@@ -50,10 +47,12 @@ const Home = () => {
                 : <Result info={info} search={search}  state={state} setstate={setstate}/>
             }
         </div>
+        
+        <Navigation  info={info} state={state} setstate={setstate}/>
         </>
         )
        }
-       {  <Character  info={info} position={state}/>}
+       {  <Character  info={info} position={state} state={state} setstate={setstate}/>}
        </>
    )
 

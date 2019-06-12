@@ -1,17 +1,16 @@
 import React from 'react';
-import '../App.css';
+import '../App.css' ;
 import Navigation from './Navigation';
-
-const Character = ({info,position}) => {
+const Character = ({info,position,state,setstate}) => {
 return (
     <>
     {
     
-      (position)
+      (position!=null)
       ?info.map((e,x)=>
       e.map((result,y)=>
           result.map((characters,i,j) =>  
-                  (x===position.x && y===position.y && i===position.i )
+                  (x===position.x && y===position.y && i===position.i)
                   ?(
                     <>
                     <div className="mt-5 offset-2" >
@@ -21,9 +20,8 @@ return (
                       <p className="subtitle">Año : {characters.birth_year}</p>
                       <p className="subtitle">Género : {characters.gender}</p>
                       </div>
-                      <Navigation/>
                     </div>
-                    
+                    <Navigation  info={info} state={state} setstate={setstate}/>
                     </>
                     )
                   :''
@@ -34,6 +32,7 @@ return (
              
       
       }
+      
      
    </>
 )
