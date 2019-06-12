@@ -8,7 +8,7 @@ const Navigation = ({info,state,setstate}) => {
     <div>
       <NavLink  onClick={()=>setstate({x:100,y:100,i:100})}>Home</NavLink>
       <Character info={info}  position={state}/>
-      <Result info={info}  position={state}/>
+      
     </div>
   );
 };
