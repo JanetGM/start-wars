@@ -47,7 +47,6 @@ const Home = () => {
             }
         </div>
         
-        <Navigation  info={info} state={state} setstate={setstate}/>
         </>
         )
        }
