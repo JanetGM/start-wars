@@ -28,7 +28,10 @@ body{
   background-color: black;
   width: 400px;
   height: 40px;
-  color: azure;
+ 
+}
+.text-box{
+  color: #61dafb;
 }
 
 .square{

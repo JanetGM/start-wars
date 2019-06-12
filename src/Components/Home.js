@@ -36,7 +36,7 @@ const Home = () => {
         <>
         <p className="title display-2 mt-5">STAR WARS</p>
        <p className="subtitle display-2">PERSONAJES</p>
-        <input type="text" className=" search border border-primary subtitle" placeholder="  BUSCAR" value={search} onChange={e=> setSearch(e.target.value)}/>
+        <input type="text" className="text-box search border border-primary subtitle" placeholder="  BUSCAR" value={search} onChange={e=> setSearch(e.target.value)}/>
         <p className="subtitle mt-5 mb-0">RESULTADOS</p>
         <div className="square"></div>
         <div className="card-columns">
