@@ -52,7 +52,9 @@ const Home = () => {
         )
        }
        {  <Character  info={info} position={state} state={state} setstate={setstate}/>}
+       {console.log(search)}
        </>
+
    )
 
  }
