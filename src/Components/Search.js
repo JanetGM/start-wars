@@ -1,39 +1,46 @@
 import React from 'react';
+import Character from './Character';
 
-const Search = ({info,search,state,setstate}) => {
+const Search = ({info,search,showDetails,setShowDetails}) => {
 
     return(
         
-      <>
-      {
-          
-         info.map((e,x)=>
-           e.map((result,y)=>
-               result.map((characters,i,j) =>        
-                           <div key={i} className="card offset-1 mt-5 " style={{ width : "350px",height:"100px"}} >
-                           <div className="border-success " style={{ width : "150px",height:"100px"}}>
-                           <h5 className="card-title mt-2">{characters.name}</h5>
-                          <p 
-                           onClick={(e)=>{
-                               e.preventDefault();
-                               setstate({x:x,y:y,i:i});  
-                             
-                           }}
-                          >Detalles</p>
+         <>
+           {
+               
+              info.map(e=>
+                e.map(result=>
+                    result.map((characters,i) => 
+                       (characters.name===search)
+                       ?
+                        (
+                            
+                                <div key={i} className="card offset-1 mt-5 animated bounce delay-5s" style={{ width : "150px",height:"100px"}} >
+                                <div className="border-success " style={{ width : "150px",height:"100px"}}>
+                                <h5 className="card-title">{characters.name}</h5>
+                                <div className="card-footer bg-transparent border-success" style={{ width : "150px",height:"20px"}}>
+                                <p onClick={()=>
+                                {
+                                    (showDetails==='on')?setShowDetails('off'):setShowDetails('on')
+                                }}>{
+
+                                (showDetails==='on')?<Character info={characters} key={i}/>:null
+                                } </p>
+                                </div>
+                                </div>
+                                </div>
                           
-                           </div>
-                           </div>
-                           
-                       
-                       )       
-                     )
-                   )
-                   
-    }
-    
-    {<Search info={info} state={state}/>}
- 
-    </> 
+                            
+                        ):null
+                      
+                     
+                    )
+                 
+                  )
+                        
+                )
+           }
+        </>
     )
 }
 export default Search;

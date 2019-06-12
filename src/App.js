@@ -2,7 +2,6 @@ import React from 'react';
 import Home from './Components/Home';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Character from './Components/Character';
 import './App.css';
 
 function App() {
