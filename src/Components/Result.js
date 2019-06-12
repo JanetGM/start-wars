@@ -1,7 +1,5 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Character from './Character';
-import {Link} from 'react-router-dom';
-import Navigation from './Navigation'
 
 
 
