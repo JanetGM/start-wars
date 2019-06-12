@@ -12,7 +12,6 @@ import '../App.css';
 const Home = () => {
     const [info, setInfo]= useState([]);
     const [search, setSearch]=useState('');
-    const [showDetails,setShowDetails]=useState('');
     const [state, setstate] = useState({x:100,y:100,i:100});
     const allData = [];
 
@@ -43,7 +42,7 @@ const Home = () => {
         <div className="card-columns">
             {
                 (search)
-                ? <Search info={info} search={search} showDetails={showDetails} setShowDetails={setShowDetails}/>
+                ? <Search info={info} search={search} state={state} setstate={setstate}/>
                 : <Result info={info} search={search}  state={state} setstate={setstate}/>
             }
         </div>
