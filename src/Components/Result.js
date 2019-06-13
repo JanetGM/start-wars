@@ -13,14 +13,9 @@ const Result = ({info,state,setstate}) => {
               info.map((e,x)=>
                 e.map((result,y)=>
                     result.map((characters,i,j) =>        
-                    <div className="mt-5 offset-2" >
-                    <p className="title display-1 ml-1 " style={{ textAlign : "left",marginTop:"20%"}}>{(characters.name).toUpperCase()}</p>
-                     <div className="border border-primary " style={{ textAlign : "left",width : "350px",height:"150px" , padding:"20px"}} >
-                     <p className="subtitle" >Peso : {characters.mass}.Kg</p>
-                     <p className="subtitle">Año : {characters.birth_year}</p>
-                     <p className="subtitle">Género : {characters.gender}</p>
-                     </div>
-                  
+                                <div key={i} className="result card offset-1 mt-5 " style={{ width : "350px",height:"100px"}} >
+                                <div className="border-success " style={{ width : "150px",height:"100px"}}>
+                                <h5 className="card-title mt-2">{characters.name}</h5>
                                <p 
                                 onClick={(e)=>{
                                     e.preventDefault();
@@ -29,8 +24,8 @@ const Result = ({info,state,setstate}) => {
                                 }}
                                >Detalles</p>
                                
-                               
-                            </div>
+                                </div>
+                                </div>
                                 
                             
                             )       
