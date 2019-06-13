@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Character from './Character';
-import Result from './Result';
 
 const Navigation = ({info,state,setstate}) => {
   return (

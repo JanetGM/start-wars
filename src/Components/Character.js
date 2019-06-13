@@ -19,6 +19,7 @@ return (
                       <p className="subtitle" >Peso : {characters.mass}.Kg</p>
                       <p className="subtitle">Año : {characters.birth_year}</p>
                       <p className="subtitle">Género : {characters.gender}</p>
+                      <p></p>
                       </div>
                     </div>
                     <Navigation  info={info} state={state} setstate={setstate}/>
