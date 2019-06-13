@@ -2,11 +2,9 @@ import React from 'react';
 import Result from './Result';
 import Character from './Character';
 import Search from './Search';
-import Navigation from './Navigation';
 import axios from 'axios';
 import {useEffect,useState} from 'react';
 import '../App.css';
- import {Link} from 'react-router-dom';
 
 
 const Home = () => {
