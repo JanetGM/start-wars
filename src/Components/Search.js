@@ -14,13 +14,16 @@ const Search = ({info,search,showDetails,setShowDetails}) => {
                        (characters.name===search)
                        ?
                         (
-                            <>
-                              <p className="title display-1 ml-1 " style={{ textAlign : "left",marginTop:"20%"}}>{(characters.name).toUpperCase()}</p>
-                              <div className="border border-primary " style={{ textAlign : "left",width : "350px",height:"150px" , padding:"20px"}} >
+                            
+                                <div key={i} className="card offset-1 mt-5 animated bounce delay-5s mt-5 offset-2" style={{ width : "150px",height:"100px"}} >
+                                <h5 className=" title display-1 ml-1">{characters.name}</h5>
+                                <div className="border border-primary">
                                 <p className="subtitle" >Peso : {characters.mass}.Kg</p>
                                 <p className="subtitle">Año : {characters.birth_year}</p>
                                 <p className="subtitle">Género : {characters.gender}</p>
-                              </div>
+                                </div>
+                                
+                                <div className="card-footer bg-transparent border-success" style={{ width : "150px",height:"20px"}}>
                                 <p onClick={()=>
                                 {
                                     (showDetails==='on')?setShowDetails('off'):setShowDetails('on')
@@ -28,8 +31,8 @@ const Search = ({info,search,showDetails,setShowDetails}) => {
 
                                 (showDetails==='on')?<Character info={characters} key={i}/>:null
                                 } </p>
-                              
-                           </>    
+                                </div>
+                                </div>
                           ):null                    
                     )
                  
